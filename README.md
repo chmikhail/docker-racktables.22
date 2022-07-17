@@ -10,6 +10,11 @@ Racktables is a nifty and robust solution for datacenter and server room asset m
 
 [www.racktables.org](https://www.racktables.org)
 
+# Build image
+```
+docker build --build-arg RACKTABLES_VERSION=0.22.0 -f Dockerfile -t ruhomor/racktables:0.22.0 .
+```
+
 # How to use this image
 
 For create maraidb service:
