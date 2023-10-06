@@ -61,10 +61,10 @@ RUN apk --no-cache update \
 
 ARG RACKTABLES_VERSION
 ENV RACKTABLES_PATH /racktables
-RUN wget -q https://github.com/RackTables/racktables/archive/RackTables-$RACKTABLES_VERSION.tar.gz \
-	&& tar -xzf RackTables-$RACKTABLES_VERSION.tar.gz \
-	&& rm RackTables-$RACKTABLES_VERSION.tar.gz \
-	&& mv racktables-RackTables-$RACKTABLES_VERSION $RACKTABLES_PATH
+RUN wget -q https://nav.dl.sourceforge.net/project/racktables/RackTables-0.22.0.tar.gz \
+	&& tar -xzf RackTables-0.22.0.tar.gz \
+	&& rm RackTables-0.22.0.tar.gz \
+	&& mv racktables-RackTables-0.22.0 $RACKTABLES_PATH
 
 ADD httpd.conf.template /etc/apache2/httpd.conf.template
 ADD docker-entrypoint.sh make_racktables_secret.php init_racktables_db.php utils.php /
